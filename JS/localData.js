@@ -1,4 +1,5 @@
 const puzzlePicUrl = [
+    "https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-1.jpg",
     "https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-2.jpg",
     "https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-3.jpg",
     "https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-4.jpg",

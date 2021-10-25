@@ -113,12 +113,12 @@ startGameBtn.addEventListener("click", () => {
 const changePicBtn = document.querySelector(".changePic");
 const allFragmentsPic = document.querySelectorAll(".puzzle .game div[class^=fragment]");
 const smallPic = document.querySelector(".smallPic");
+smallPic.style.backgroundImage = `url(${puzzlePicUrl[0]})`
 changePicBtn.addEventListener("click", () => {
     gameSteps.textContent = 0;
     clearInterval(timer);
     gameTime.textContent = 0;
     let num = Math.floor(Math.random() * puzzlePicUrl.length);
-    console.log(num);
     smallPic.style.backgroundImage = `url(${puzzlePicUrl[num]})`
     allFragmentsPic.forEach(item => {
         item.style.backgroundImage = `url(${puzzlePicUrl[num]})`
