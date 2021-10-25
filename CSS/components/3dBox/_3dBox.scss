@@ -1,0 +1,114 @@
+$width:10vmax;
+
+@mixin container {
+    position: relative;
+    width: $width;
+    height: $width;
+    transform-style: preserve-3d;
+    animation: rotate 5s linear infinite;
+}
+
+@mixin face {
+    @include container;
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: all 1s;
+
+        &:nth-child(1) {
+            transform: translateZ(0.5*$width);
+        }
+
+        &:nth-child(2) {
+            transform: rotateX(-180deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(3) {
+            transform: rotateX(90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(4) {
+            transform: rotateX(-90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(5) {
+            transform: rotateY(90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(6) {
+            transform: rotateY(-90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(7) {
+            transform: translateZ(0.5*$width);
+        }
+
+        &:nth-child(8) {
+            transform: rotateX(-180deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(9) {
+            transform: rotateX(90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(10) {
+            transform: rotateX(-90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(11) {
+            transform: rotateY(90deg) translateZ(0.5*$width);
+        }
+
+        &:nth-child(12) {
+            transform: rotateY(-90deg) translateZ(0.5*$width);
+        }
+    }
+
+    &:hover div:nth-child(1) {
+        transform: translateZ($width);
+    }
+
+    &:hover div:nth-child(2) {
+        transform: rotateX(-180deg) translateZ($width);
+    }
+
+
+    &:hover div:nth-child(3) {
+        transform: rotateX(90deg) translateZ($width);
+    }
+
+
+    &:hover div:nth-child(4) {
+        transform: rotateX(-90deg) translateZ($width);
+    }
+
+
+    &:hover div:nth-child(5) {
+        transform: rotateY(90deg) translateZ($width);
+    }
+
+    &:hover div:nth-child(6) {
+        transform: rotateY(-90deg) translateZ($width);
+    }
+}
+
+
+
+
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0) rotateX(0);
+    }
+
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}

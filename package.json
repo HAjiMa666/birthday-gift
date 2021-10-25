@@ -1,0 +1,16 @@
+{
+  "name": "birthday_gift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.43.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass CSS/style.scss CSS/style.css"
+    
+  },
+  "author": "",
+  "license": "ISC"
+}

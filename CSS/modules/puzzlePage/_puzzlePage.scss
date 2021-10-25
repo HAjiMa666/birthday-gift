@@ -1,0 +1,258 @@
+@use "../../components/dialogBox/dialogBox"as *;
+@use "../../components/button/button"as *;
+@use "sass:math";
+$fragmentPercentage: 10vmax;
+
+.puzzle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin-top: 30px;
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        order: -2;
+    }
+
+    .game {
+        width: 3*$fragmentPercentage;
+        height: 3*$fragmentPercentage;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div[class^=fragment] {
+            box-sizing: border-box;
+            flex: 33.3%;
+            border: 1px solid #ccc;
+            width: $fragmentPercentage;
+            height: $fragmentPercentage;
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-1.jpg);
+            background-size: 3*$fragmentPercentage 3*$fragmentPercentage;
+        }
+
+        .fragment1 {
+            background-position: 0% 0%;
+        }
+
+        .fragment2 {
+            background-position: -$fragmentPercentage 0%;
+        }
+
+        .fragment3 {
+            background-position: -$fragmentPercentage*2 0%;
+        }
+
+        .fragment4 {
+            background-position: 0% (-$fragmentPercentage);
+        }
+
+        .fragment5 {
+            background-position: (-$fragmentPercentage) (-$fragmentPercentage);
+        }
+
+        .fragment6 {
+            background-position: (-$fragmentPercentage*2) (-$fragmentPercentage);
+        }
+
+        .fragment7 {
+            background-position: 0% (-$fragmentPercentage*2);
+        }
+
+        .fragment8 {
+            background-position: -$fragmentPercentage (-$fragmentPercentage*2);
+        }
+
+        .fragment9 {
+            background-position: -$fragmentPercentage*2 (-$fragmentPercentage*2);
+        }
+
+        .fragment-1 {
+            background-position: 0% 0% !important;
+        }
+
+        .fragment-2 {
+            background-position: -$fragmentPercentage 0% !important;
+        }
+
+        .fragment-3 {
+            background-position: -$fragmentPercentage*2 0% !important;
+        }
+
+        .fragment-4 {
+            background-position: 0% (-$fragmentPercentage) !important;
+        }
+
+        .fragment-5 {
+            background-position: (-$fragmentPercentage) (-$fragmentPercentage) !important;
+        }
+
+        .fragment-6 {
+            background-position: (-$fragmentPercentage*2) (-$fragmentPercentage) !important;
+        }
+
+        .fragment-7 {
+            background-position: 0% (-$fragmentPercentage*2) !important;
+        }
+
+        .fragment-8 {
+            background-position: -$fragmentPercentage (-$fragmentPercentage*2) !important;
+        }
+
+        .fragment-8 {
+            background-position: -$fragmentPercentage (-$fragmentPercentage*2) !important;
+        }
+
+        .whiteFrag {
+            background-image: none !important;
+        }
+    }
+
+    .btnGroup {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        button {
+            box-sizing: content-box;
+            width: 6vmax;
+            min-width: 50px;
+            height: 4vmax;
+            min-height: 30px;
+            margin: 0px 15px;
+            background-color: #0360eb;
+            color: white;
+            border-radius: 10px;
+            font-size: 1vmax;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+    }
+
+    .smallPic {
+        margin: 10px 0px;
+        order: -1;
+        width: $fragmentPercentage;
+        height: $fragmentPercentage;
+        background-image: url(../../../images/puzzle/3d-dm-1.jpg);
+        background-size: $fragmentPercentage $fragmentPercentage;
+    }
+
+    .achivement {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        margin-left: 20px;
+        transform: translateY(-50%);
+        width: $fragmentPercentage*2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .gameTime {
+            background-color: cadetblue;
+        }
+
+        .gameSteps {
+            background-color: beige;
+        }
+    }
+
+    .shadow {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        .dialogBox {
+            @include dialogBox;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 1.3rem;
+            transform: translate(-50%, -50%);
+            background-color: #F8F8FF;
+
+            button {
+                @include button;
+                font-size: 1.2rem;
+                color: #fff;
+                background-color: #6366F1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .puzzle {
+        h3 {
+            font-size: 2vmax;
+        }
+
+        .achivement {
+            position: static;
+            top: 0%;
+            left: 0%;
+            transform: translateY(0);
+            margin-top: 20px;
+            margin-left: 0px;
+        }
+    }
+}
+
+.roll-in-blurred-left {
+    -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-1000px) rotate(-720deg);
+        transform: translateX(-1000px) rotate(-720deg);
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes roll-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-1000px) rotate(-720deg);
+        transform: translateX(-1000px) rotate(-720deg);
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}

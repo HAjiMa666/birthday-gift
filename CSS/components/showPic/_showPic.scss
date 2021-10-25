@@ -1,0 +1,22 @@
+@mixin showPic {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: .3);
+    position: relative;
+    z-index: 998;
+    visibility: hidden;
+}
+
+@mixin pic {
+    position: relative;
+    width: 40vmax;
+    height: 30vmax;
+    background-color: aqua;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 999;
+}

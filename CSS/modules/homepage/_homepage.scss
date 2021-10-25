@@ -1,0 +1,208 @@
+@use "../../components/dialogBox/dialogBox"as *;
+@use "../../components/button/button"as *;
+
+$width:10vmax;
+$height:10vmax;
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #C4B5FD;
+    z-index: 1;
+
+    .scrollPic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+
+        .pic1,
+        .pic2,
+        .pic3,
+        .pic4,
+        .pic5,
+        .pic6,
+        .pic7,
+        .pic8 {
+            position: absolute;
+            width: $width;
+            height: 1.2*$height;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all .3s ease-in-out;
+        }
+
+        .pic1 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D3.jpg);
+            transform: translateX(-$width);
+        }
+
+        .pic2 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E5%81%A5%E8%BA%AB.jpg);
+            transform: translateX(-$width*2);
+        }
+
+        .pic3 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D4.jpg);
+            transform: translateX(-$width*3);
+        }
+
+        .pic4 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D15.jpg);
+            transform: translateX(-$width*4);
+        }
+
+        .pic5 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D6.jpg);
+            transform: translateX(-$width*5);
+        }
+
+        .pic6 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D7.jpg);
+            transform: translateX(-$width*6);
+        }
+
+        .pic7 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D8.jpg);
+            transform: translateX(-$width*7);
+        }
+
+        .pic8 {
+            background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E8%87%AA%E6%8B%8D10.jpg);
+            transform: translateX(-$width*8);
+        }
+    }
+
+    .bless {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        z-index: 3;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            flex: 25%;
+            color: #fff;
+            cursor: pointer;
+            font-family: 'Zhi Mang Xing', cursive;
+        }
+
+
+    }
+
+    .shadow {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: #C4B5FD;
+        left: 0;
+        top: 0;
+        z-index: 4;
+
+        .dialogBox {
+            @include dialogBox;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 1.3rem;
+            transform: translate(-50%, -50%);
+            background-color: #F8F8FF;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/mother/%E5%90%88%E6%88%901.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            button {
+                @include button;
+                font-size: 1.2rem;
+                color: #fff;
+                background-color: #6366F1;
+            }
+        }
+    }
+}
+
+.text-pop-up-top {
+    animation: text-pop-up-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.pic-scroll {
+    animation: pic-scroll 20s linear infinite forwards;
+}
+
+@-webkit-keyframes text-pop-up-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes text-pop-up-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+
+    100% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes pic-scroll {
+    0% {
+        transform: translateX(0px);
+    }
+
+    30% {
+        transform: translateX(calc(100vw - #{$width}));
+    }
+
+    50% {
+        transform: translate(calc(100vw - #{$width}), calc(100vh - #{($height*1.2)}));
+    }
+
+    80% {
+        transform: translate(0vw, calc(100vh - #{($height*1.2)}));
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}

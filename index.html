@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BirthDay Gift</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/style.css">
+
+<body>
+    <section class="homepage">
+        <audio src="./audio/毛阿敏 - 烛光里的妈妈.mp3" id="MainMelody"></audio>
+        <div class="scrollPic">
+            <div class="pic1"></div>
+            <div class="pic2"></div>
+            <div class="pic3"></div>
+            <div class="pic4"></div>
+            <div class="pic5"></div>
+            <div class="pic6"></div>
+            <div class="pic7"></div>
+            <div class="pic8"></div>
+        </div>
+        <div class="bless"></div>
+        <div class="shadow">
+            <div class="dialogBox">
+                <span>妈妈,这是给你的生日礼物啊,请注意查收</span>
+                <button>确认</button>
+            </div>
+        </div>
+    </section>
+    <section class="show">
+        <div class="carousel">
+            <div class="showPic">
+                <div class="bigPic"></div>
+            </div>
+            <div class="bg-blur"></div>
+            <span class="iconfont left-arrow">&#xeb0a;</span>
+            <div class="pic1"></div>
+            <div class="pic2"></div>
+            <div class="pic3"></div>
+            <div class="pic4"></div>
+            <div class="pic5"></div>
+            <div class="pic6"></div>
+            <span class="iconfont right-arrow">&#xeb09;</span>
+        </div>
+        <hr>
+        <section class="Box">
+            <section class="rotateBox1">
+                <div class="rpPic1"></div>
+                <div class="rpPic2"></div>
+                <div class="rpPic3"></div>
+                <div class="rpPic4"></div>
+                <div class="rpPic5"></div>
+                <div class="rpPic6"></div>
+                <div class="rpPic7"></div>
+                <div class="rpPic8"></div>
+                <div class="rpPic9"></div>
+                <div class="rpPic10"></div>
+                <div class="rpPic11"></div>
+                <div class="rpPic12"></div>
+            </section>
+            <section class="rotateBox2">
+                <div class="rpPic1"></div>
+                <div class="rpPic2"></div>
+                <div class="rpPic3"></div>
+                <div class="rpPic4"></div>
+                <div class="rpPic5"></div>
+                <div class="rpPic6"></div>
+                <div class="rpPic7"></div>
+                <div class="rpPic8"></div>
+                <div class="rpPic9"></div>
+                <div class="rpPic10"></div>
+                <div class="rpPic11"></div>
+                <div class="rpPic12"></div>
+            </section>
+            <section class="rotateBox3">
+                <div class="rpPic1"></div>
+                <div class="rpPic2"></div>
+                <div class="rpPic3"></div>
+                <div class="rpPic4"></div>
+                <div class="rpPic5"></div>
+                <div class="rpPic6"></div>
+                <div class="rpPic7"></div>
+                <div class="rpPic8"></div>
+                <div class="rpPic9"></div>
+                <div class="rpPic10"></div>
+                <div class="rpPic11"></div>
+                <div class="rpPic12"></div>
+            </section>
+        </section>
+
+    </section>
+    <section class="letter">
+        <div class="dialogBox">
+            <span class="word">妈妈,这是我写给你的一些话</span>
+            <button>确认</button>
+        </div>
+        <p class="blessWord"></p>
+    </section>
+    <section class="puzzle">
+        <h3>在最后的最后,我们来玩个拼图游戏</h3>
+        <div class="game">
+            <div class="fragment1"></div>
+            <div class="fragment2"></div>
+            <div class="fragment3"></div>
+            <div class="fragment4"></div>
+            <div class="fragment5"></div>
+            <div class="fragment6"></div>
+            <div class="fragment7"></div>
+            <div class="fragment8"></div>
+            <div class="fragment9"></div>
+        </div>
+        <div class="btnGroup">
+            <button class="start">开始游戏</button>
+            <button class="recover">恢复</button>
+            <button class="reRandom">重新打乱</button>
+            <button class="changePic">更换图片</button>
+        </div>
+        <div class="smallPic"></div>
+        <div class="achivement">
+            <div class="gameTime">
+                <span>游戏时间</span>
+                <span class="time"></span>
+            </div>
+            <div class="gameSteps">
+                <span>所用步数</span>
+                <span class="steps"></span>
+            </div>
+        </div>
+        <div class="endGame">
+            <audio src="./audio/victory.m4a" id="victory"></audio>
+            <!-- <div class="victoryPic"></div> -->
+        </div>
+        <div class="shadow">
+            <div class="dialogBox">
+                <span>恭喜你游戏成功</span>
+                <button>确认</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./JS/homepage.js" type="module"></script>
+<script src="./JS/showpage.js"></script>
+<script src="./JS/letter.js" type="module"></script>
+<script src="./JS/localData.js" type="module"></script>
+<script src="./JS/puzzle/changeLocation.js" type="module"></script>
+<script src="./JS/puzzle/createPuzzleArr.js" type="module"></script>
+<script src="./JS/puzzle/createPuzzleMap.js" type="module"></script>
+<script src="./JS/puzzle/findAdjecentEle.js" type="module"></script>
+<script src="./JS/puzzle/getVictory.js" type="module"></script>
+<script src="./JS/puzzle/randomFrag.js" type="module"></script>
+<script src="./JS/puzzle/index.js" type="module"></script>
+
+
+</html>

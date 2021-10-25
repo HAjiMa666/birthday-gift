@@ -1,0 +1,327 @@
+@use "../../components/showPic/showPic"as *;
+@use "../../components/3dBox/3dBox"as *;
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(../../../font/iconfont.ttf) format('truetype');
+}
+
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.show {
+    width: 100vw;
+    height: 100vh;
+
+    .carousel {
+        width: 100%;
+        height: 20vw;
+        min-height: 200px;
+        position: relative;
+
+        .showPic {
+            @include showPic;
+
+            .bigPic {
+                @include pic;
+            }
+        }
+
+        .bg-blur {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            left: 0;
+            top: 0;
+            filter: blur(30px);
+            z-index: 1;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            cursor: pointer;
+            position: absolute;
+            font-size: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: brown;
+        }
+
+        .left-arrow {
+            left: 25%;
+            z-index: 1;
+        }
+
+        .right-arrow {
+            right: 25%;
+            z-index: 1;
+        }
+
+        div[class^="pic"] {
+            width: 30vw;
+            min-width: 300px;
+            height: 20vw;
+            min-height: 200px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    }
+
+    .Box {
+        margin-top: 30px;
+        width: 100%;
+        height: calc(100vh - 30px - 20vw);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .rotateBox1 {
+            @include face;
+
+            div[class^="rpPic"] {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .rpPic1 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-1.jpg);
+            }
+
+            .rpPic2 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-2.jpg);
+            }
+
+            .rpPic3 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-3.jpg);
+            }
+
+            .rpPic4 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-4.jpg);
+            }
+
+            .rpPic5 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-5.jpg);
+            }
+
+            .rpPic6 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-6.jpg);
+            }
+
+            .rpPic7 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-1.jpg);
+            }
+
+            .rpPic8 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-2.jpg);
+            }
+
+            .rpPic9 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-3.jpg);
+            }
+
+            .rpPic10 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-4.jpg);
+            }
+
+            .rpPic11 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-5.jpg);
+            }
+
+            .rpPic12 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-dm-6.jpg);
+            }
+        }
+
+        .rotateBox2 {
+            @include face;
+
+            div[class^="rpPic"] {
+                background-size: contain;
+            }
+
+            .rpPic1 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-1.jpg);
+            }
+
+            .rpPic2 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-2.jpg);
+            }
+
+            .rpPic3 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-3.jpg);
+            }
+
+            .rpPic4 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-4.jpg);
+            }
+
+            .rpPic5 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-5.jpg);
+            }
+
+            .rpPic6 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-6.jpg);
+            }
+
+            .rpPic7 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-1.jpg);
+            }
+
+            .rpPic8 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-2.jpg);
+            }
+
+            .rpPic9 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-3.jpg);
+            }
+
+            .rpPic10 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-4.jpg);
+            }
+
+            .rpPic11 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-5.jpg);
+            }
+
+            .rpPic12 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-hj-6.jpg);
+            }
+        }
+
+        .rotateBox3 {
+            @include face;
+
+            div[class^="rpPic"] {
+                background-size: contain;
+            }
+
+            .rpPic1 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-1.jpg);
+            }
+
+            .rpPic2 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-2.jpg);
+            }
+
+            .rpPic3 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-3.jpg);
+            }
+
+            .rpPic4 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-4.jpg);
+            }
+
+            .rpPic5 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-5.jpg);
+            }
+
+            .rpPic6 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-6.jpg);
+            }
+
+            .rpPic7 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-1.jpg);
+            }
+
+            .rpPic8 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-2.jpg);
+            }
+
+            .rpPic9 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-3.jpg);
+            }
+
+            .rpPic10 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-4.jpg);
+            }
+
+            .rpPic11 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-5.jpg);
+            }
+
+            .rpPic12 {
+                background-image: url(https://codespirit-publicpicture.oss-cn-hangzhou.aliyuncs.com/img/3d-Box/3d-mm-6.jpg);
+            }
+        }
+    }
+
+
+}
+
+
+
+.fadeOut {
+    animation: fadeOut 1.5s linear 1 forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 1.5s linear 1 forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .show {
+        .Box {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+
+    .show {
+        .Box {
+            flex-direction: column;
+            justify-content: center;
+
+            .rotateBox1 {
+                display: none;
+            }
+
+            .rotateBox2 {
+                display: none;
+            }
+        }
+    }
+}
